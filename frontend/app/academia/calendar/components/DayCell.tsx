@@ -93,7 +93,11 @@ const HolidayDisplay: React.FC<HolidayDisplayProps> = ({
   if (!holiday) return null;
   return (
     <p
-      className={`text-left break-words -mx-2 text-sm ${isErrorDay ? "text-light-error-color dark:text-dark-error-color" : "rounded-md border-l-2 border-r-0 border-light-info-color bg-light-info-background px-1 py-0.5 pl-2 text-light-info-color dark:border-dark-info-color dark:bg-dark-info-background dark:text-dark-info-color dark:opacity-70"}`}
+      className={`text-left break-words -mx-2 text-sm ${
+        isErrorDay
+          ? "text-light-error-color dark:text-dark-error-color"
+          : "rounded-md border-l-2 border-r-0 border-light-info-color bg-light-info-background px-1 py-0.5 pl-2 text-light-info-color dark:border-dark-info-color dark:bg-dark-info-background dark:text-dark-info-color dark:opacity-70"
+      }`}
     >
       {holiday.replaceAll(",", ", ")}
     </p>
@@ -111,7 +115,7 @@ const DayOrderDisplay: React.FC<DayOrderDisplayProps> = ({
   isToday,
   isWorkingDay,
 }) => {
-  if (!isWorkingDay || dayOrder === "-") return null; // Only show if working day and not "-"
+  if (!isWorkingDay || dayOrder === "-") return null;
   return (
     <h2 className="w-full text-right text-lg font-medium xl:text-left">
       Day Order{" "}
@@ -120,4 +124,4 @@ const DayOrderDisplay: React.FC<DayOrderDisplayProps> = ({
       </span>
     </h2>
   );
-});
+};
