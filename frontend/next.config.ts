@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
 		formats: ['image/webp', 'image/avif'],
 		minimumCacheTTL: 7200,
 	},
-	output: 'standalone',
-	// Monorepo: ensure file tracing resolves from workspace root.
-	outputFileTracingRoot: path.join(__dirname, ".."),
 	experimental: {
 		nextScriptWorkers: true,
 		viewTransition: true,
